@@ -2,7 +2,7 @@ FROM node:latest
 
 COPY . /src
 
-WORKOIR /src
+WORKDIR /src
 
 RUN npm install --production
 

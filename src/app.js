@@ -62,7 +62,9 @@ var ProductSchema = new Schema({
     }
 });
 var Product = mongoose.model('Product', ProductSchema);
-
+app.get("/", function (req, res) {
+    res.send("Product");
+});
 app.get('/api/product', function (req, res) {
     var productFind = Product.find(function (err, data) {
         if (err) {
